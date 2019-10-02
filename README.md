@@ -3,10 +3,15 @@
 glich.space is the semester project for the winter semester 2019 at CODE. This repository
 contains all of the source code and assets for the game.
 
+## Getting Started
+
+After cloning the repository it strictly necessary to initialize all submodules via `git submodule update --init --recursive`.
+When first opening the Unity3D project **DO NOT** run Auto Update API as this is will break stuff.
+
 ## Technology stack
 
 We are using [Unity3D](https://unity.com/) as our game engine of choice. As we are a developing a VR game,
-we choose to use [VRTK](https://vrtoolkit.readme.io/) to provide us with a common interface for a variaty of VR headsets.
+we choose to use [VRTK](https://vrtoolkit.readme.io/) to provide us with a common interface for a variety of VR headsets.
 
 ## Collaboration
 
