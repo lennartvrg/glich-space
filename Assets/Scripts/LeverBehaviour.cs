@@ -1,23 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LeverBehaviour : MonoBehaviour
 {
-    private Animator _animation;
+    private Animator Animation;
+    
+    public PowerlineBehaviour Powerline;
     
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        _animation = GetComponent<Animator>();
+        Animation = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PullLever()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            _animation.Play("Lever_PullDown");
-        }
+        Animation.Play("Lever_PullDown");
+        Powerline.SetPower(true);
     }
 }
