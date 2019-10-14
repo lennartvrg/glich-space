@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 
-public class PowerlineBehaviour : MonoBehaviour
+public class PowerlineBehaviour : Activatable
 {
     private const string SHADER_EMISSION_KEYWORD = "_EMISSION";
 
-    public PowerlineBehaviour Next;
+    [SerializeField]
+    public Activatable Next;
     
     private Material Material;
     
@@ -14,17 +15,11 @@ public class PowerlineBehaviour : MonoBehaviour
         Material = GetComponent<Renderer>().material;
     }
 
-    public void SetPower(bool enabled)
+    public override void SetPower(bool powerEnabled)
     {
-        if (enabled)
-        {
-            Material.EnableKeyword(SHADER_EMISSION_KEYWORD);
-        }
-        else
-        {
-            Material.DisableKeyword(SHADER_EMISSION_KEYWORD);
-        }
+        if (powerEnabled) Material.EnableKeyword(SHADER_EMISSION_KEYWORD);
+        else Material.DisableKeyword(SHADER_EMISSION_KEYWORD);
         
-        if (Next != null) Next.SetPower(enabled);
+        if (Next != null) Next.SetPower(powerEnabled);
     }
 }
