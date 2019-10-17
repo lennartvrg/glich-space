@@ -3,6 +3,7 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 .DS_Store
 
+*.blend1
 .idea
 
 # User-specific stuff
@@ -131,3 +132,5 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+*.blend1.meta
