@@ -4,7 +4,6 @@ public class PowerlineBehaviour : Activatable
 {
     private const string SHADER_EMISSION_KEYWORD = "_EMISSION";
 
-    [SerializeField]
     public Activatable Next;
     
     private Material Material;

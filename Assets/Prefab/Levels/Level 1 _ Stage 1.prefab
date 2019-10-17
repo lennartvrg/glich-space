@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7506646610156577268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715398429292340024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7506646608796259075
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,19 +80,6 @@ Transform:
   m_Father: {fileID: 7506646608796259074}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7506646610156577268
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715398429292340024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7506646610306889233
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569346993361134126, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
+        type: 3}
+      propertyPath: m_Name
+      value: actable.Primary_Grab.Secondary_Swap_Swap
       objectReference: {fileID: 0}
     - target: {fileID: 8655431405021061390, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
         type: 3}

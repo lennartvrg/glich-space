@@ -887,6 +887,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elevator
       objectReference: {fileID: 0}
+    - target: {fileID: 3380341567867816716, guid: db1528f73b141c14da2c91c3b9fae3ae,
+        type: 3}
+      propertyPath: TrackingArea
+      value: 
+      objectReference: {fileID: 1225672077}
+    - target: {fileID: 3380341567867816716, guid: db1528f73b141c14da2c91c3b9fae3ae,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 910117891}
     - target: {fileID: 3380341567867816715, guid: db1528f73b141c14da2c91c3b9fae3ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -942,16 +952,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3380341567867816716, guid: db1528f73b141c14da2c91c3b9fae3ae,
-        type: 3}
-      propertyPath: TrackingArea
-      value: 
-      objectReference: {fileID: 1225672077}
-    - target: {fileID: 3380341567867816716, guid: db1528f73b141c14da2c91c3b9fae3ae,
-        type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 910117891}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1528f73b141c14da2c91c3b9fae3ae, type: 3}
 --- !u!1001 &7506646608950223489

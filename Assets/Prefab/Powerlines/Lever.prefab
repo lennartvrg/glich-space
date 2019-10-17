@@ -345,10 +345,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0469
       objectReference: {fileID: 0}
-    - target: {fileID: 4800425021652016632, guid: 240fdd985e025cb459f73d2b1bb7b341,
+    - target: {fileID: 8265383420104874212, guid: 240fdd985e025cb459f73d2b1bb7b341,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1588786030056821694, guid: 240fdd985e025cb459f73d2b1bb7b341,
         type: 3}
@@ -380,10 +380,10 @@ PrefabInstance:
       propertyPath: FirstTouched.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 8265383420104874212, guid: 240fdd985e025cb459f73d2b1bb7b341,
+    - target: {fileID: 4800425021652016632, guid: 240fdd985e025cb459f73d2b1bb7b341,
         type: 3}
-      propertyPath: m_Constraints
-      value: 126
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2652022254811315598, guid: 240fdd985e025cb459f73d2b1bb7b341,
         type: 3}
