@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Playgrounds/Lennart.unity
+    guid: 35f042f2f4a2d455ca69992dcd0badf8
   m_configObjects: {}
