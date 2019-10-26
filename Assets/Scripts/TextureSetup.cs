@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TextureSetup : MonoBehaviour
 {
@@ -15,7 +13,7 @@ public class TextureSetup : MonoBehaviour
         {
             secondCamera.targetTexture.Release();
         }
-        secondCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        secondCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB64);
         secondCameraMaterial.mainTexture = secondCamera.targetTexture;
     }
 }

@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2595493261175202362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.285, y: 1.5, z: 0.132}
+  m_LocalPosition: {x: -0.266, y: 1.5, z: 0.157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7275772897936989036}
@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackedAlias: {fileID: 0}
+  ConnectedElevator: {fileID: 0}
 --- !u!1 &2595493262050918423
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +434,6 @@ GameObject:
   - component: {fileID: 2595493262050918416}
   - component: {fileID: 2595493262050918419}
   - component: {fileID: 2595493262050918418}
-  - component: {fileID: 2595493262050918417}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -501,20 +501,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2595493262050918417
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2595493262050918423}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &2595493262140725514
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +512,6 @@ GameObject:
   - component: {fileID: 2595493262140725515}
   - component: {fileID: 2595493262140725622}
   - component: {fileID: 2595493262140725621}
-  - component: {fileID: 2595493262140725620}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -594,20 +579,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2595493262140725620
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2595493262140725514}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &2595493262175247853
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackedAlias: {fileID: 0}
+  ConnectedElevator: {fileID: 0}
 --- !u!1 &2595493262569323782
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2595493262569323782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.422, y: 1.5, z: -0.246}
+  m_LocalPosition: {x: -0.266, y: 1.5, z: 0.157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7275772898062583002}
@@ -831,6 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackedAlias: {fileID: 0}
+  ConnectedElevator: {fileID: 0}
 --- !u!1 &9073896250767747388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,8 +1285,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 109582281453333239, guid: 9fb04244be180df099cb7a29868b29e5, type: 3}
+    - target: {fileID: 3732845938936811906, guid: 9fb04244be180df099cb7a29868b29e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639778549224555329, guid: 9fb04244be180df099cb7a29868b29e5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fb04244be180df099cb7a29868b29e5, type: 3}
 --- !u!1 &4873525111080618718 stripped
 GameObject:

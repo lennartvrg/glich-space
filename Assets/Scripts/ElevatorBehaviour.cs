@@ -7,9 +7,7 @@ public class ElevatorBehaviour : Activatable
 
     public Transform Player;
     
-    public GameObject Door;
-
-    public Transform Platform;
+    public GameObject Platform;
     
     public BoxCollider PlatformCollider;
 
@@ -25,16 +23,16 @@ public class ElevatorBehaviour : Activatable
 
     private Animator Animation;
     
-    private const string ELEVATOR_DOOR_OPEN = "Elevator_DoorOpen";
+    private const string ELEVATOR_DOOR_OPEN = "Doors_Open";
     
-    private const string ELEVATOR_DOOR_CLOSE = "Elevator_DoorClose";
+    private const string ELEVATOR_DOOR_CLOSE = "Doors_Close";
 
 
     // Start is called before the first frame update
     public void Start()
     {
-        ApplyElevatorMovement(Platform, YAxisStoppingPoints[0] + 0.315f);
-        Animation = Door.GetComponent<Animator>();
+        ApplyElevatorMovement(Platform.transform, YAxisStoppingPoints[0]);
+        Animation = Platform.GetComponent<Animator>();
     }
     
     public override void SetPower(bool powerEnabled)
@@ -66,7 +64,7 @@ public class ElevatorBehaviour : Activatable
             {
                 var upChange = Mathf.Lerp(YAxisStoppingPoints[CurrentStopIndex], YAxisStoppingPoints[NextStopIndex], AnimationDriver);
                 
-                ApplyElevatorMovement(Platform, upChange + 0.315f);
+                ApplyElevatorMovement(Platform.transform, upChange);
                 ApplyElevatorMovement(TrackingArea, upChange);
                 
                 AnimationDriver += 0.5f * Time.deltaTime;
@@ -89,7 +87,7 @@ public class ElevatorBehaviour : Activatable
     private bool ElevatorShouldMove()
     {
         return NextStopIndex != CurrentStopIndex && PlatformCollider.bounds.Contains(Player.position) &&
-               !Door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName(ELEVATOR_DOOR_CLOSE);
+               !Platform.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName(ELEVATOR_DOOR_CLOSE);
     }
 
     private void ApplyElevatorMovement(Transform target, float yAxis)
