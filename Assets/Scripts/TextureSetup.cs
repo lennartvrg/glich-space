@@ -18,10 +18,4 @@ public class TextureSetup : MonoBehaviour
         secondCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
         secondCameraMaterial.mainTexture = secondCamera.targetTexture;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

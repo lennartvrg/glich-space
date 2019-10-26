@@ -442,16 +442,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3190085828703223575, guid: 6b39fc01b320054c89517e5ae09fa55f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8555873345565747323, guid: 6b39fc01b320054c89517e5ae09fa55f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.2
-      objectReference: {fileID: 0}
     - target: {fileID: 6905301186709919911, guid: 6b39fc01b320054c89517e5ae09fa55f,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -605,6 +595,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 964829450431897758}
     m_Modifications:
+    - target: {fileID: 810551276724710641, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
+        type: 3}
+      propertyPath: m_Name
+      value: Lever
+      objectReference: {fileID: 0}
     - target: {fileID: 4423926607878332130, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -660,21 +655,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 810551276724710641, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
-        type: 3}
-      propertyPath: m_Name
-      value: Lever
-      objectReference: {fileID: 0}
-    - target: {fileID: 1569346993361134126, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
-        type: 3}
-      propertyPath: m_Name
-      value: actable.Primary_Grab.Secondary_Swap_Swap
-      objectReference: {fileID: 0}
     - target: {fileID: 8655431405021061390, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
         type: 3}
       propertyPath: Powerline
       value: 
       objectReference: {fileID: 2967727295240337563}
+    - target: {fileID: 1569346993361134126, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6,
+        type: 3}
+      propertyPath: m_Name
+      value: actable.Primary_Grab.Secondary_Swap_Swap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb2f59bf8eeddf4fa12ccaf241d8bf6, type: 3}
 --- !u!4 &5195315084305158715 stripped
