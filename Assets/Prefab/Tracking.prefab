@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 4315896199824777918, guid: ae0332a1eea44df4ca54bb67f6645dd8,
         type: 3}
       propertyPath: targetState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4893095752389336993, guid: ae0332a1eea44df4ca54bb67f6645dd8,
         type: 3}
@@ -300,10 +300,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8327978174497889862}
     m_Modifications:
-    - target: {fileID: 1467290445770872, guid: b6b557e5a38efee4f90e60a9287d7b93, type: 3}
-      propertyPath: m_Name
-      value: UnityXRCameraRig
-      objectReference: {fileID: 0}
     - target: {fileID: 4938262979527042, guid: b6b557e5a38efee4f90e60a9287d7b93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -348,6 +344,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1467290445770872, guid: b6b557e5a38efee4f90e60a9287d7b93, type: 3}
+      propertyPath: m_Name
+      value: UnityXRCameraRig
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81284256634359146, guid: b6b557e5a38efee4f90e60a9287d7b93, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b6b557e5a38efee4f90e60a9287d7b93, type: 3}
@@ -382,10 +382,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8327978174497889862}
     m_Modifications:
-    - target: {fileID: 1121419207030402, guid: 9623e1c09606a01498f200718f0f607d, type: 3}
-      propertyPath: m_Name
-      value: SimulatedCameraRig
-      objectReference: {fileID: 0}
     - target: {fileID: 4665875853779370, guid: 9623e1c09606a01498f200718f0f607d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -428,6 +424,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4665875853779370, guid: 9623e1c09606a01498f200718f0f607d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121419207030402, guid: 9623e1c09606a01498f200718f0f607d, type: 3}
+      propertyPath: m_Name
+      value: SimulatedCameraRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121419207030402, guid: 9623e1c09606a01498f200718f0f607d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114333664465635948, guid: 9623e1c09606a01498f200718f0f607d,
