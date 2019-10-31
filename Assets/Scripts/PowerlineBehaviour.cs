@@ -16,8 +16,16 @@ public class PowerlineBehaviour : Activatable
 
     public override void SetPower(bool powerEnabled)
     {
-        if (powerEnabled) Material.EnableKeyword(SHADER_EMISSION_KEYWORD);
-        else Material.DisableKeyword(SHADER_EMISSION_KEYWORD);
+        if (powerEnabled)
+        {
+            Material.EnableKeyword(SHADER_EMISSION_KEYWORD);
+            DynamicGI.SetEmissive(GetComponent<Renderer>(), Color.red * 2f);
+        }
+        else
+        {
+            Material.DisableKeyword(SHADER_EMISSION_KEYWORD);
+            DynamicGI.SetEmissive(GetComponent<Renderer>(), Color.red * 0f);
+        }
         
         if (Next != null) Next.SetPower(powerEnabled);
     }
