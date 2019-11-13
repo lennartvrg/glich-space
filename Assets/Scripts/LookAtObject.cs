@@ -9,9 +9,16 @@ public class LookAtObject : MonoBehaviour
     public float countdown = 3;
     public float time = 3;
     private RaycastHit _hit;
+    private bool finished = false;
+    public ElevatorBehaviour elevator;
 
     void Update()
     {
+        if (finished)
+        {
+            return;
+        }
+        
         if (Physics.Raycast(transform.position, transform.forward, out _hit, maxDistance) && _hit.transform.CompareTag("Mirror"))
         {
             _isCounting = true;
@@ -25,7 +32,10 @@ public class LookAtObject : MonoBehaviour
         if (countdown <= 0)
         {
             //Elevator Behaviour
-            Debug.Log("Moritz gucke mal es geht!");
+            Debug.Log("BumBum");
+            elevator.SetPower(true);
+            finished = true;
+
         }
 
         if (_isCounting)
