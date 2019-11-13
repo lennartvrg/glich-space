@@ -601,6 +601,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b39fc01b320054c89517e5ae09fa55f, type: 3}
+--- !u!1 &827350769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8328512149141783851, guid: 498674c84c4f74942b7852aca1ffa2b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1312092862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &827350774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827350769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5103371bdba174344adcca3abe240780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 100
+  countdown: 3
+  time: 3
+  elevator: {fileID: 1653687862}
 --- !u!1001 &877661974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -891,6 +913,11 @@ PrefabInstance:
       propertyPath: SceneCameras
       value: 
       objectReference: {fileID: 1978408606}
+    - target: {fileID: 5700806411608654943, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
+        type: 3}
+      propertyPath: secondCameraMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a96d825dc82ce2e2a71873870a963be, type: 2}
     - target: {fileID: 8430044312285902038, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
         type: 3}
       propertyPath: playerCamera
