@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
- 
+using UnityEngine.XR;
+
 // This is in fact just the Water script from Pro Standard Assets,
 // just with refraction stuff removed.
  
@@ -149,7 +150,9 @@ public class MirrorReflection : MonoBehaviour
 		{
 			if( m_ReflectionTexture )
 				DestroyImmediate( m_ReflectionTexture );
-			m_ReflectionTexture = new RenderTexture( m_TextureSize, m_TextureSize, 16 );
+			var test = XRSettings.eyeTextureDesc;
+			m_ReflectionTexture = new RenderTexture( test.width * 2, test.height, 16 );
+			m_ReflectionTexture.vrUsage = VRTextureUsage.TwoEyes;
 			m_ReflectionTexture.name = "__MirrorReflection" + GetInstanceID();
 			m_ReflectionTexture.isPowerOfTwo = true;
 			m_ReflectionTexture.hideFlags = HideFlags.DontSave;
