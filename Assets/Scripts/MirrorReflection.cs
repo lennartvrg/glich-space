@@ -150,8 +150,7 @@ public class MirrorReflection : MonoBehaviour
 		{
 			if( m_ReflectionTexture )
 				DestroyImmediate( m_ReflectionTexture );
-			var test = XRSettings.eyeTextureDesc;
-			m_ReflectionTexture = new RenderTexture( test.width * 2, test.height, 16 );
+			m_ReflectionTexture = new RenderTexture( Screen.width, Screen.height, 16 );
 			m_ReflectionTexture.vrUsage = VRTextureUsage.TwoEyes;
 			m_ReflectionTexture.name = "__MirrorReflection" + GetInstanceID();
 			m_ReflectionTexture.isPowerOfTwo = true;
