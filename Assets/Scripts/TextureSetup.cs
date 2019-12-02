@@ -10,9 +10,20 @@ public class TextureSetup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var test = XRSettings.eyeTextureDesc;
+        if (secondCamera.targetTexture != null)
+        {
+            secondCamera.targetTexture.Release();
+        }
         
-        secondCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        RenderTextureDescriptor desc = new RenderTextureDescriptor(Screen.width, Screen.height);
+        if (XRSettings.enabled)
+        {
+            desc = XRSettings.eyeTextureDesc;
+            Debug.Log(desc.vrUsage);
+            desc.width /= 2;
+        }
+        
+        secondCamera.targetTexture = new RenderTexture(desc);
         secondCameraMaterial.mainTexture = secondCamera.targetTexture;
     }
 
