@@ -15,13 +15,13 @@ public class TextureSetup : MonoBehaviour
             secondCamera.targetTexture.Release();
         }
         
-        RenderTextureDescriptor desc = new RenderTextureDescriptor(Screen.width, Screen.height);
-        if (XRSettings.enabled)
-        {
-            desc = XRSettings.eyeTextureDesc;
-            Debug.Log(desc.vrUsage);
-            desc.width /= 2;
-        }
+        RenderTextureDescriptor desc = new RenderTextureDescriptor(Screen.width, Screen.height, RenderTextureFormat.Default, 24);
+        //if (XRSettings.enabled)
+        //{
+        //    desc = XRSettings.eyeTextureDesc;
+        //    Debug.Log(desc.vrUsage);
+        //    desc.width /= 2;
+        //}
         
         secondCamera.targetTexture = new RenderTexture(desc);
         secondCameraMaterial.mainTexture = secondCamera.targetTexture;

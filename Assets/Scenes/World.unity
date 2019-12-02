@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -421,6 +421,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 790072765}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &688213789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4956532458741801665, guid: c5a224dc13b90498faa00f2ea9eb182f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984362218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &692825449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4683101189647121981, guid: 6b39fc01b320054c89517e5ae09fa55f,
@@ -623,6 +629,7 @@ MonoBehaviour:
   countdown: 3
   time: 3
   elevator: {fileID: 1653687862}
+  zombie: {fileID: 688213789}
 --- !u!1001 &877661974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -897,16 +904,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1429382613}
     m_Modifications:
-    - target: {fileID: 4983507121622583934, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
-        type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1554241375}
-    - target: {fileID: 3003072352693680185, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
@@ -942,6 +939,16 @@ PrefabInstance:
       propertyPath: TrackedAlias
       value: 
       objectReference: {fileID: 542466922}
+    - target: {fileID: 4983507121622583934, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1554241375}
+    - target: {fileID: 3003072352693680185, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8430044312285902038, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
         type: 3}
       propertyPath: playerCamera
