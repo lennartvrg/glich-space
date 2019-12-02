@@ -12,6 +12,9 @@ public class LookAtObject : MonoBehaviour
     private bool finished = false;
     public ElevatorBehaviour elevator;
 
+    public GameObject zombie;
+    private Renderer zombieRend;
+
     void Update()
     {
         if (finished)
@@ -31,6 +34,10 @@ public class LookAtObject : MonoBehaviour
 
         if (countdown <= 0)
         {
+            //Zombie Behaviour
+            zombieRend = zombie.GetComponent<Renderer>();
+            zombieRend.enabled = true;
+            
             //Elevator Behaviour
             Debug.Log("BumBum");
             elevator.SetPower(true);
