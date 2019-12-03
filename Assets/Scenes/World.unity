@@ -629,6 +629,7 @@ MonoBehaviour:
   countdown: 3
   time: 3
   elevator: {fileID: 1653687862}
+  zCountdown: 4
   zombie: {fileID: 688213789}
 --- !u!1001 &877661974
 PrefabInstance:
@@ -1228,12 +1229,12 @@ PrefabInstance:
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
