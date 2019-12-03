@@ -1184,6 +1184,21 @@ PrefabInstance:
       propertyPath: LockAspectRatio
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2595493261175202340, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595493260970959052, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595493262569323776, guid: 0c7b5fcdfa3fb445686bdbc160b8da22,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2595493261877464293, guid: 0c7b5fcdfa3fb445686bdbc160b8da22, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c7b5fcdfa3fb445686bdbc160b8da22, type: 3}
@@ -1208,17 +1223,17 @@ PrefabInstance:
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8327978174497889862, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
@@ -1323,7 +1338,7 @@ PrefabInstance:
     - target: {fileID: 7705386677480291364, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7705386677480291365, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
@@ -1353,7 +1368,7 @@ PrefabInstance:
     - target: {fileID: 8329366247689705466, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8329289694160600527, guid: 498674c84c4f74942b7852aca1ffa2b2,
         type: 3}
@@ -1789,6 +1804,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587156963887090171, guid: c5a224dc13b90498faa00f2ea9eb182f,
+        type: 3}
+      propertyPath: m_Range
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587156963887090171, guid: c5a224dc13b90498faa00f2ea9eb182f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587156963887090171, guid: c5a224dc13b90498faa00f2ea9eb182f,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587156963887090171, guid: c5a224dc13b90498faa00f2ea9eb182f,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a224dc13b90498faa00f2ea9eb182f, type: 3}

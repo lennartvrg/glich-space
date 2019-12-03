@@ -51,7 +51,7 @@ Shader "Unlit/ScreenCutoutShader"
 			fixed4 frag (v2f i) : SV_Target
 			{
 				i.screenPos /= i.screenPos.w;
-				fixed4 col = tex2D(_MainTex, UnityStereoTransformScreenSpaceTex(i.screenPos));
+				fixed4 col = tex2D(_MainTex, i.screenPos.xy);
 				
 				return col;
 			}

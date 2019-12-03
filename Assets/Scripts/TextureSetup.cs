@@ -16,12 +16,12 @@ public class TextureSetup : MonoBehaviour
         }
         
         RenderTextureDescriptor desc = new RenderTextureDescriptor(Screen.width, Screen.height, RenderTextureFormat.Default, 24);
-        //if (XRSettings.enabled)
-        //{
-        //    desc = XRSettings.eyeTextureDesc;
-        //    Debug.Log(desc.vrUsage);
-        //    desc.width /= 2;
-        //}
+        if (XRSettings.enabled)
+        {
+            desc = XRSettings.eyeTextureDesc;
+            Debug.Log(desc.vrUsage);
+            desc.width /= 2;
+        }
         
         secondCamera.targetTexture = new RenderTexture(desc);
         secondCameraMaterial.mainTexture = secondCamera.targetTexture;

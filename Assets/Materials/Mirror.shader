@@ -36,8 +36,8 @@ Shader "FX/MirrorReflection"
 			sampler2D _ReflectionTex;
 			fixed4 frag(v2f i) : SV_Target
 			{
-				fixed4 tex = tex2D(_MainTex, UnityStereoScreenSpaceUVAdjust(i.uv, _MainTex_ST));
-				fixed4 refl = tex2Dproj(_ReflectionTex, UnityStereoTransformScreenSpaceTex(UNITY_PROJ_COORD(i.refl)));
+				fixed4 tex = tex2D(_MainTex, i.uv);
+				fixed4 refl = tex2Dproj(_ReflectionTex, UNITY_PROJ_COORD(i.refl));
 				return tex * refl;
 			}
 			ENDCG
