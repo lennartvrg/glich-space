@@ -932,10 +932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5103371bdba174344adcca3abe240780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 100
+  maxDistance: 1.5
   countdown: 3
   time: 3
   elevator: {fileID: 0}
+  zCountdown: 4
   zombie: {fileID: 4956532458741801665}
 --- !u!1001 &968475851573070048
 PrefabInstance:
