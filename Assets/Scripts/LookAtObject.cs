@@ -16,6 +16,7 @@ public class LookAtObject : MonoBehaviour
 
     public GameObject zombie;
     private Renderer zombieRend;
+    private AudioSource zombieAudio;
 
     void Update()
     {
@@ -40,9 +41,12 @@ public class LookAtObject : MonoBehaviour
             Debug.Log("Läuft");
             //Zombie Behaviour
             zombieRend = zombie.GetComponent<Renderer>();
+            zombieAudio = zombie.GetComponent<AudioSource>();
+            
             zombieRend.enabled = true;
             zCounting = true;
-            
+            zombieAudio.Play();
+
             //Elevator Behaviour
             elevator.SetPower(true);
             
