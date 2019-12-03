@@ -43,7 +43,10 @@ public class ElevatorBehaviour : Activatable
 
     private IEnumerator CloseDoor()
     {
-        yield return new WaitForSeconds(5);
+        while (!PlatformCollider.bounds.Contains(Player.position))
+        {
+            yield return new WaitForSeconds(1);
+        }
         Animation.Play(ELEVATOR_DOOR_CLOSE);
         Up();
     }
@@ -79,9 +82,15 @@ public class ElevatorBehaviour : Activatable
         }
         else if (!PlatformCollider.bounds.Contains(Player.position) && ResetPlatform)
         {
-            Animation.Play(ELEVATOR_DOOR_CLOSE);
             ResetPlatform = false;
+            StartCoroutine(CloseDoorAfterPlayerLeft());
         }
+    }
+
+    private IEnumerator CloseDoorAfterPlayerLeft()
+    {
+        yield return new WaitForSeconds(1);
+        Animation.Play(ELEVATOR_DOOR_CLOSE);
     }
 
     private bool ElevatorShouldMove()

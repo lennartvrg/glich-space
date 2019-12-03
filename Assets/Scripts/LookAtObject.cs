@@ -18,6 +18,13 @@ public class LookAtObject : MonoBehaviour
     private Renderer zombieRend;
     private AudioSource zombieAudio;
 
+    void Start()
+    {
+        //Zombie Behaviour
+        zombieRend = zombie.GetComponent<Renderer>();
+        zombieAudio = zombie.GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (finished)
@@ -28,7 +35,6 @@ public class LookAtObject : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out _hit, maxDistance) && _hit.transform.CompareTag("Mirror"))
         {
             _isCounting = true;
-            Debug.Log("Counting");
         }
         else
         {
@@ -38,11 +44,6 @@ public class LookAtObject : MonoBehaviour
 
         if (countdown <= 0)
         {
-            Debug.Log("Läuft");
-            //Zombie Behaviour
-            zombieRend = zombie.GetComponent<Renderer>();
-            zombieAudio = zombie.GetComponent<AudioSource>();
-            
             zombieRend.enabled = true;
             zCounting = true;
             zombieAudio.Play();
@@ -54,12 +55,10 @@ public class LookAtObject : MonoBehaviour
 
         if (zCounting)
         {
-            Debug.Log("Zombie Count");
             countdown = 500;
             zCountdown -= Time.deltaTime;
             if (zCountdown <= 0)
             {
-                Debug.Log("Zombie Done");
                 zombieRend.enabled = false;
                 finished = true;
             }
