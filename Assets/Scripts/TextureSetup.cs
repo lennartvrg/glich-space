@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.XR;
 
 public class TextureSetup : MonoBehaviour
 {
@@ -9,7 +10,20 @@ public class TextureSetup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        secondCamera.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        if (secondCamera.targetTexture != null)
+        {
+            secondCamera.targetTexture.Release();
+        }
+        
+        RenderTextureDescriptor desc = new RenderTextureDescriptor(Screen.width, Screen.height, RenderTextureFormat.Default, 24);
+        if (XRSettings.enabled)
+        {
+            desc = XRSettings.eyeTextureDesc;
+            Debug.Log(desc.vrUsage);
+            desc.width /= 2;
+        }
+        
+        secondCamera.targetTexture = new RenderTexture(desc);
         secondCameraMaterial.mainTexture = secondCamera.targetTexture;
     }
 

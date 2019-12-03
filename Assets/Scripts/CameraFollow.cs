@@ -1,20 +1,23 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using VRTK;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class CameraFollow : MonoBehaviour
 {
-    
-    public Transform playerCamera;
+    [Header("Movement")]
+    public Transform Player;
 
-    // Update is called once per frame
-    void Update()
+    public Transform otherPortal;
+
+    public Transform portal;
+    
+    private void LateUpdate()
     {
-        transform.position = playerCamera.position + new Vector3(0, 0, 4);
-        transform.rotation = playerCamera.rotation;
-    }
+        Vector3 playerOffsetFromPortal = Player.position - otherPortal.position;
+        transform.position = portal.position + playerOffsetFromPortal;
 
-    
+        float angularDifferenceBetweenPortals = Quaternion.Angle(portal.rotation, otherPortal.rotation);
+        Quaternion portalRotationDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortals, Vector3.up);
+        Vector3 newCameraDirection = portalRotationDifference * Player.forward;
+        transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+    }
 }

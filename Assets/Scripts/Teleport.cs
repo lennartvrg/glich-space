@@ -17,7 +17,7 @@ public class Teleport : MonoBehaviour
             return;
         }
 
-        TrackedAlias.Translate(new Vector3(0, 0, 4f));
+        TrackedAlias.Translate(new Vector3(0, 0, 4));
         if (ConnectedElevator != null)
         {
             ConnectedElevator.SetPower(true);
