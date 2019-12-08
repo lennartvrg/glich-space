@@ -49,6 +49,9 @@
                 SHADOW_COORDS(1)
             };
             
+            uniform sampler2D _Albedo;
+            float4 _Albedo_ST;
+            
             //---------------//
             // VERTEX SHADER //
             //---------------//
@@ -58,7 +61,7 @@
                 
                 o.pos = UnityObjectToClipPos(i.vertex);
                 o.worldPos = mul(unity_ObjectToWorld, i.vertex);
-                o.uv = i.uv;
+                o.uv = TRANSFORM_TEX(i.uv, _Albedo);
 
 
                 float3 normalWorld = normalize(mul(unity_ObjectToWorld, float4(i.normal, 0.0)).xyz);
@@ -76,13 +79,12 @@
             // FRAGMENT SHADER //
             //-----------------//
             uniform fixed4 _Color;
-            uniform sampler2D _Albedo;
             
-            uniform sampler2D _Normal;
             uniform int _Glossiness;
+            uniform sampler2D _Normal;
             
-            uniform sampler2D _Parallax;
             uniform float _ParallaxStrength;
+            uniform sampler2D _Parallax;
            
             uniform fixed _AmbientFactor;
             uniform fixed4 _Emissive;
@@ -192,6 +194,9 @@
                 SHADOW_COORDS(1)
             };
             
+            uniform sampler2D _Albedo;
+            float4 _Albedo_ST;
+            
             //---------------//
             // VERTEX SHADER //
             //---------------//
@@ -201,7 +206,7 @@
                 
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                o.uv = v.uv;        
+                o.uv = TRANSFORM_TEX(v.uv, _Albedo);        
                 
                 float3 normalWorld = normalize(mul(unity_ObjectToWorld, float4(v.normal, 0.0)).xyz);
                 float3 tangentWorld = normalize(mul(unity_ObjectToWorld, float4(v.tangent, 0.0)).xyz);
@@ -218,7 +223,6 @@
             // FRAGMENT SHADER //
             //-----------------//
             uniform fixed4 _Color;
-            uniform sampler2D _Albedo;
             
             uniform sampler2D _Normal;
             uniform int _Glossiness;
