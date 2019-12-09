@@ -5,10 +5,10 @@
         _Color ("Color", Color) = (1, 1, 1, 1)
         _Albedo ("Albedo", 2D) = "white" {}
         
-        _Normal ("Normal", 2D) = "bump" {}        
+        [NoScaleOffset] [Normal] _Normal ("Normal", 2D) = "bump" {}        
         _Glossiness ("Glossiness", Int) = 64
         
-        _Parallax ("Parallax", 2D) = "black" {}
+        [NoScaleOffset] _Parallax ("Parallax", 2D) = "black" {}
         _ParallaxStrength ("Parallax Strength", Range(0, 0.1)) = 0
         
         _AmbientFactor ("Ambient Factor", Range(0, 1)) = 0.1
