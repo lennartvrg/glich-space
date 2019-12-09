@@ -11,6 +11,7 @@
         [NoScaleOffset] _Parallax ("Parallax", 2D) = "black" {}
         _ParallaxStrength ("Parallax Strength", Range(0, 0.1)) = 0
         
+        _Ambient ("Ambient", Color) = (1, 1, 1, 1)
         _AmbientFactor ("Ambient Factor", Range(0, 1)) = 0.1
         _Emissive ("Emissive", Color) = (0, 0, 0, 1)
     }
@@ -86,7 +87,9 @@
             uniform float _ParallaxStrength;
             uniform sampler2D _Parallax;
            
+            uniform fixed4 _Ambient;
             uniform fixed _AmbientFactor;
+            
             uniform fixed4 _Emissive;
                                     
             /**
@@ -95,7 +98,7 @@
              */
             float3 ambient()
             {
-                return _LightColor0.rgb * max(_AmbientFactor, 0.0);
+                return _LightColor0.rgb * _Ambient* max(_AmbientFactor, 0.0);
             }
             
             /**
@@ -266,18 +269,22 @@
 
             float4 frag (vertex2Fragment input) : SV_Target
             {   
-                float3 lightDirWorld = normalize(_WorldSpaceLightPos0.xyz - input.worldPos.xyz);
+                float3 lightDirWorld = _WorldSpaceLightPos0.xyz - input.worldPos.xyz;
+                fixed distance = length(lightDirWorld);
+                
+                lightDirWorld = lightDirWorld / distance;
                 float3 viewDirWorld =  normalize(_WorldSpaceCameraPos.xyz - input.worldPos.xyz);
             
                 float2 texCoords = parallax(input.uv, viewDirWorld);
                 float3 normal = mul(input.tangentToWorld, UnpackNormal(tex2D(_Normal, texCoords)));
 
+                float atten = 1.0 / (1.0 + pow(distance, 2) * unity_4LightAtten0.z);
                 fixed shadow = SHADOW_ATTENUATION(input);
 
                 return float4((
                     specular(normal, lightDirWorld, viewDirWorld) +
                     diffuse(normal, lightDirWorld)
-                ) * shadow * tex2D(_Albedo, texCoords) * _Color, 1.0);
+                ) * shadow * atten * tex2D(_Albedo, texCoords) * _Color, 1.0);
             }
             ENDCG
         }
