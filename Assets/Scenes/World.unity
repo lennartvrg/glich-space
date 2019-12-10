@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.39509434, g: 0.41201904, b: 0.40638304, a: 1}
+  m_IndirectSpecularColor: {r: 0.39509472, g: 0.41201964, b: 0.4063833, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -487,13 +487,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443538771}
-  m_LocalRotation: {x: -0.27144754, y: 0.78068715, z: -0.0015436219, w: -0.5628867}
+  m_LocalRotation: {x: -0.38520777, y: 0.8031049, z: 0.010314656, w: -0.45445693}
   m_LocalPosition: {x: -1.633, y: 9.403, z: 4.703}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 17.939001, y: -112.646, z: 333.662}
+  m_LocalEulerAnglesHint: {x: 19.485, y: -128.48901, z: 318.221}
 --- !u!1 &529875243
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 827280c8108524bfd8567662dc0d3631, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1627,7 +1627,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1752,12 +1752,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b23e3edc9d6ac37408647169ff1db487, type: 2}
+      objectReference: {fileID: 2100000, guid: 827280c8108524bfd8567662dc0d3631, type: 2}
     - target: {fileID: 190975005712347021, guid: 6b39fc01b320054c89517e5ae09fa55f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: b23e3edc9d6ac37408647169ff1db487, type: 2}
     - target: {fileID: 3329477212447223759, guid: 6b39fc01b320054c89517e5ae09fa55f,
         type: 3}
       propertyPath: m_LocalScale.z

@@ -278,7 +278,7 @@
                 float2 texCoords = parallax(input.uv, viewDirWorld);
                 float3 normal = mul(input.tangentToWorld, UnpackNormal(tex2D(_Normal, texCoords)));
 
-                float atten = 1.0 / (1.0 + pow(distance, 2) * unity_4LightAtten0.z);
+                float atten = 1.0 / (distance);
                 fixed shadow = SHADOW_ATTENUATION(input);
 
                 return float4((
